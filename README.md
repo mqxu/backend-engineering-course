@@ -80,18 +80,28 @@ runner，推上去的工作流会在几秒内以 failure 结束，且 `steps` �
 以后若 Actions 可用，把工作流里 `on.push` 取消注释，并把仓库 Pages 的 Source 改回
 "GitHub Actions" 即可。
 
-仓库建好后首次要开通 Pages（`<owner>/<repo>` 换成实际值）：
+仓库地址 <https://github.com/mqxu/backend-engineering-course>，Pages 的来源已设为
+`gh-pages` 分支根目录，一般不用再动。换仓库或想改写来源分支时：
 
 ```bash
-curl -X POST -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
+curl -X PATCH -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
   "https://api.github.com/repos/<owner>/<repo>/pages" \
   -d '{"build_type":"legacy","source":{"branch":"gh-pages","path":"/"}}'
 ```
 
-开通或切换分支来源之后不会自动构建，要手动触发一次 `POST /repos/<owner>/<repo>/pages/builds`。
+切换来源之后不会自动构建，要手动触发一次：
+
+```bash
+curl -X POST -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
+  "https://api.github.com/repos/<owner>/<repo>/pages/builds"
+```
 
 刚发布完不要立刻下结论：Pages 的 CDN 有 1 到 2 分钟延迟，这期间新页面返回 404、老页面返回
 上一次的内容。判断依据是拿线上的字节数和本地 `dist` 对比，不是看状态码。
+
+本机访问 github.com 要经代理，走默认的 HTTP/2 会随机报 `Error in the HTTP2 framing layer`
+或 `Empty reply from server`，同一个命令重试几次有时能过。`deploy.sh` 里已用
+`GIT_CONFIG_*` 环境变量把 `http.version` 降到 HTTP/1.1，脚本外手动推产物时也要加上。
 
 ## 写作与配置约定
 

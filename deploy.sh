@@ -10,6 +10,13 @@ set -euo pipefail
 # 变化仍会拒绝。
 export GIT_SSH_COMMAND="ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new"
 
+# 本机访问 github.com 要经代理，走默认的 HTTP/2 会随机报
+# "Error in the HTTP2 framing layer" / "Empty reply from server"。降到 HTTP/1.1 才稳。
+# 产物推送在临时目录里执行，读不到仓库内的 .git/config，所以在这里用环境变量兜住。
+export GIT_CONFIG_COUNT=1
+export GIT_CONFIG_KEY_0=http.version
+export GIT_CONFIG_VALUE_0=HTTP/1.1
+
 cd "$(dirname "$0")"
 ROOT="$(pwd)"
 
