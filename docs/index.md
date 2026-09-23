@@ -25,7 +25,7 @@ features:
     details: 启动耗时、jar 体积、镜像层大小、内存占用、测试耗时，全部来自本机实际运行，不写记不准的数。
   - icon: 🎯
     title: 一个业务贯穿全程
-    details: 只讲资源分享应用。从第 1 篇的 Hello World 开始，一路加上校验、认证、缓存、消息、监控、容器化，最后接上 Vue 3 管理端。
+    details: 只讲校园活动服务平台。从第 1 篇的 Hello World 开始，一路加上校验、认证、缓存、消息、监控、容器化，最后接上 Vue 3 管理端。
   - icon: 🔎
     title: 4.x 的变化讲清楚了
     details: starter 改名、模块拆分、Jackson 3、测试包迁移、Actuator 三类搬迁、jarmode 换名，容易踩的地方单独列出来。
@@ -44,7 +44,7 @@ features:
 
 Spring Boot 官方文档写得严谨，但它是参考手册，不是教材：每个特性单独成节，读完之后仍然不知道这些特性在一个项目里怎么拼起来。这份教程保留官方的章节顺序（方便随时回原文查证），在每一节后面补上**同一个项目里的真实实现**，并且把实测结果写进正文。
 
-全程只讲一个业务：**资源分享应用**。它足够简单——分类、资源、下载量三个概念；也足够真实——涉及分页检索、权限控制、文件上传、下载计数这类高频场景。
+全程只讲一个业务：**校园活动服务平台**。它足够简单——场地、活动、报名三个概念；也足够真实——涉及分页检索、权限控制、名额控制、文件上传这类高频场景。
 
 ::: tip 三种读法
 - **从头学**：从第 0 篇读起，按顺序往下走。第 3 篇的配置管理和第 6 篇的数据访问决定后面所有代码的风格，不建议跳。
@@ -79,12 +79,12 @@ Spring Boot 官方文档写得严谨，但它是参考手册，不是教材：�
 
 | 工程 | 技术要点 | 端口 | 首次出现 |
 | --- | --- | --- | --- |
-| `resource-hub` | Spring Data JPA 版本，后端主线 | 8080 | 第 1 篇 |
-| `resource-hub-mybatisplus` | 等价实现的 MyBatis-Plus 版本，用于对照 | 8081 | 第 6 篇 |
-| `resource-hub-messaging` | 专题工程：Kafka、RabbitMQ、WebSocket/STOMP | — | 第 8 篇 |
-| `resource-hub-testing` | 专题工程：四层测试与 Testcontainers | — | 第 9 篇 |
-| `resource-hub-observability` | 专题工程：Actuator 端点、健康检查、指标 | — | 第 10 篇 |
-| `resource-hub-web` | Vue 3 + Element Plus 管理端 | 5173 | 第 12 篇 |
+| `activity-server` | Spring Data JPA 版本，后端主线 | 8080 | 第 1 篇 |
+| `activity-server-mybatisplus` | 等价实现的 MyBatis-Plus 版本，用于对照 | 8081 | 第 6 篇 |
+| `activity-server-messaging` | 专题工程：Kafka、RabbitMQ、WebSocket/STOMP | — | 第 8 篇 |
+| `activity-server-testing` | 专题工程：四层测试与 Testcontainers | — | 第 9 篇 |
+| `activity-server-observability` | 专题工程：Actuator 端点、健康检查、指标 | — | 第 10 篇 |
+| `activity-server-web` | Vue 3 + Element Plus 管理端 | 5173 | 第 12 篇 |
 
 第 8、9、10 篇各有一个专题工程，只保留最小一套分层代码，把篇幅留给当篇主题，互不依赖，可以单独运行与测试。第 11 篇不新增工程，直接对主线工程做打包与容器化。工程说明见[案例工程一览](/project/)。
 

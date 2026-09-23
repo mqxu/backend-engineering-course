@@ -5,6 +5,9 @@ node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 
+# VitePress 加载配置文件时产生的临时文件
+docs/.vitepress/config.mts.timestamp-*.mjs
+
 # 系统与编辑器
 .DS_Store
 Thumbs.db

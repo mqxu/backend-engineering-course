@@ -9,7 +9,7 @@ const base = process.env.DOCS_BASE ?? '/backend-engineering-course/'
 export default defineConfig({
   lang: 'zh-CN',
   title: '后端工程化开发',
-  description: 'Spring Boot 4.1 完整教程 · 按官方文档章节顺序重写，每一节配可运行代码 · 资源分享应用项目驱动',
+  description: 'Spring Boot 4.1 完整教程 · 按官方文档章节顺序重写，每一节配可运行代码 · 校园活动服务平台项目驱动',
 
   head: [
     ['meta', { name: 'theme-color', content: '#6db33f' }],

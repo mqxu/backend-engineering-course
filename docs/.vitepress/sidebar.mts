@@ -33,7 +33,7 @@ const chapters: Record<string, { title: string; group: string; items: Item[] }> 
       { text: "本篇导学", link: "/ch01/" },
       { text: "一、对照官方教程：从零到 Hello World", link: "/ch01/01" },
       { text: "二、Maven 构建系统：parent、starter、plugin 三者关系", link: "/ch01/02" },
-      { text: "三、案例项目 resource-hub 起步", link: "/ch01/03" },
+      { text: "三、案例项目 activity-server 起步", link: "/ch01/03" },
       { text: "四、DevTools：改完代码不用手动重启", link: "/ch01/04" },
       { text: "五、常见问题排查", link: "/ch01/05" },
     ]
@@ -47,7 +47,7 @@ const chapters: Record<string, { title: string; group: string; items: Item[] }> 
       { text: "二、@SpringBootApplication 三段式拆解", link: "/ch02/02" },
       { text: "三、自动配置是怎么工作的", link: "/ch02/03" },
       { text: "四、Bean 与依赖注入", link: "/ch02/04" },
-      { text: "五、实战：把 resource-hub 的分层落下来", link: "/ch02/05" },
+      { text: "五、实战：把 activity-server 的分层落下来", link: "/ch02/05" },
       { text: "六、常见问题", link: "/ch02/06" },
     ]
   },
@@ -79,7 +79,7 @@ const chapters: Record<string, { title: string; group: string; items: Item[] }> 
       { text: "四、参数校验", link: "/ch04/04" },
       { text: "五、全局异常处理", link: "/ch04/05" },
       { text: "六、分页与多条件查询", link: "/ch04/06" },
-      { text: "七、文件上传下载", link: "/ch04/07" },
+      { text: "七、文件上传与读取", link: "/ch04/07" },
       { text: "八、拦截器实战：请求耗时统计", link: "/ch04/08" },
       { text: "九、跨域（CORS）", link: "/ch04/09" },
       { text: "十、静态资源与错误页", link: "/ch04/10" },

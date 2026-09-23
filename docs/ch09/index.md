@@ -18,7 +18,7 @@ title: "测试：单元测试、切片测试与 Testcontainers"
 - **端到端怎么做**：`RestTestClient` 替代 `TestRestTemplate` 的实际用法，以及 `TestRestTemplate` 到底是被废弃还是被搬走
 - **真实数据库怎么办**：Testcontainers 从 1.x 升到 2.0 之后的模块与包名变化，以及没有 Docker 的环境怎么收场
 
-配套工程是 `resource-hub-testing`，它是本篇的独立工程，只保留最小一套分层代码（Controller / Service / Repository / Entity），把篇幅全部留给测试。全篇 31 个用例，覆盖下面的每一层。
+配套工程是 `activity-server-testing`，它是本篇的独立工程，只保留最小一套分层代码（Controller / Service / Repository / Entity），把篇幅全部留给测试。全篇 31 个用例，覆盖下面的每一层。
 
 ---
 
