@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="后端工程化开发">
+  <rect width="32" height="32" rx="7" fill="#6db33f"/>
+  <path d="M8.2 23.6c-2.6-5.4.4-13 8-16.6 4.6-2.2 8.2-1.2 8.7 2.4.6 4.3-2.9 9.5-8.8 12.6-3.2 1.7-6.3 1.9-7.9 1.6z" fill="#ffffff"/>
+  <path d="M20.6 9.4c1.2 3.1-.1 7.2-3.2 10.1" stroke="#4e8a2c" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+</svg>
